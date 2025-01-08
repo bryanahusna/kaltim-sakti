@@ -8,11 +8,18 @@ class WelcomeScreenPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: ElevatedButton(
-            onPressed: () {
-              context.goNamed('login_page');
-            },
-            child: const Text('Login')),
+        child: Column(
+          children: [
+            const Text('Selamat datang di Aplikasi SAKTI'),
+            const Text('Satu Akses Kalimantan Timur'),
+            ElevatedButton(
+                onPressed: () {
+                  context.goNamed('login_page');
+                },
+                child: const Text('Mulai')
+            )
+          ],
+        ),
       ),
     );
   }
