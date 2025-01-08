@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaltim_sakti/pages/beranda_page/beranda_page.dart';
+import 'package:kaltim_sakti/pages/profile_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -16,7 +17,7 @@ class _MainPageState extends State<MainPage> {
     const Placeholder(),
     const Placeholder(),
     const Placeholder(),
-    const Placeholder(),
+    const ProfilePage(),
   ];
 
   void _onItemTapped(int index) {
