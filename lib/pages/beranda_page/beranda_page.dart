@@ -102,10 +102,7 @@ class BerandaPage extends StatelessWidget {
                     context,
                     'Urus Izin',
                     'assets/logo_urus_izin.png',
-                    () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Placeholder()))),
+                    () => context.goNamed('urus_izin_page')),
               ],
             ),
             Container(
