@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kaltim_sakti/pages/beranda_page/darurat_page.dart';
+import 'package:kaltim_sakti/pages/beranda_page/info_kaltim_page.dart';
 import 'package:kaltim_sakti/pages/beranda_page/urus_izin_page.dart';
 import 'package:kaltim_sakti/pages/login_page.dart';
 import 'package:kaltim_sakti/pages/main_page.dart';
@@ -42,6 +43,12 @@ class MainApp extends StatelessWidget {
               name: 'urus_izin_page',
               builder: (context, state) {
                 return const UrusIzinPage();
+              }),
+          GoRoute(
+              path: '/info_kaltim_page',
+              name: 'info_kaltim_page',
+              builder: (context, state) {
+                return const InfoKaltimPage();
               }),
         ])
   ], initialLocation: '/welcome_screen', debugLogDiagnostics: false);

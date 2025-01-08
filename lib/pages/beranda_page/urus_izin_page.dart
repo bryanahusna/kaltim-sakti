@@ -8,7 +8,6 @@ class UrusIzinPage extends StatefulWidget {
 }
 
 class _UrusIzinPageState extends State<UrusIzinPage> {
-  String _selectedEmergency = "ambulance";
   final List<_IzinModel> _izinModels = [
     _IzinModel(title: 'Perizinan Usaha', description: 'Izin Mendirikan Bangunan (IMB)\nIzin Lokasi', onTap: () {}),
     _IzinModel(title: 'Layanan Sosial dan Kesehatan', description: 'Pengurusan Bantuan Sosial\nKartu Sehat', onTap: () {}),
@@ -17,13 +16,6 @@ class _UrusIzinPageState extends State<UrusIzinPage> {
     _IzinModel(title: 'Layanan Pertanahan', description: 'Sertifikasi Tanah\nHak Guna Tanah', onTap: () {}),
     _IzinModel(title: 'Layanan Pendidikan', description: 'Pendaftaran Bantuan Pendidikan\nIzin Pembangunan Sekolah', onTap: () {}),
   ];
-  
-
-  void _onEmergencySelected(String type) {
-    setState(() {
-      _selectedEmergency = type;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +76,7 @@ class _IzinCard extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: BorderRadius.circular(32),
         color: Color(0xFF02517C)
       ),
       child: Column(
@@ -92,7 +84,7 @@ class _IzinCard extends StatelessWidget {
         children: [
           Text(
               izinModel.title,
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 24),
+              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 32),
           ),
           const SizedBox(height: 4,),
           Text(

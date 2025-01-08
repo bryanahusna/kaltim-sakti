@@ -94,10 +94,7 @@ class BerandaPage extends StatelessWidget {
                     context,
                     'Info Kaltim',
                     'assets/logo_info_kaltim.png',
-                    () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Placeholder()))),
+                    () => context.goNamed('info_kaltim_page')),
                 _buildGridItem(
                     context,
                     'Urus Izin',
