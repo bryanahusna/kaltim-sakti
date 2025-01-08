@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.fromLTRB(48, 152, 48, 0),
+              padding: EdgeInsets.fromLTRB(60, 152, 60, 0),
               child: Image.asset('assets/splash/logo.png', fit: BoxFit.fitWidth,),
             ),
 
@@ -35,6 +35,7 @@ class LoginPage extends StatelessWidget {
                 TextFormField(
                   style: TextStyle(fontSize: 18),
                   decoration: InputDecoration(
+                    hintText: '08xx',
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none),
