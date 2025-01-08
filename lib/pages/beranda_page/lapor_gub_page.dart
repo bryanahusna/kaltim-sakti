@@ -25,7 +25,7 @@ class _LaporGubPageState extends State<LaporGubPage> {
           'Tolong segera ditindak, tetangga saya dipukuli pak, warga sudah coba memediasi.',
       'location': 'SAMARINDA',
       'time': '1 hari lalu',
-      'image': 'assets/lapor-gub-image/kekerasan.jpg',
+      'image': 'assets/lapor-gub-image/kekerasan.webp',
     },
     {
       'status': 'MENUNGGU',
