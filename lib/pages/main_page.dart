@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kaltim_sakti/pages/beranda_page.dart';
+import 'package:kaltim_sakti/pages/beranda_page/beranda_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -49,7 +49,7 @@ class _MainPageState extends State<MainPage> {
               padding: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
                 color: Color(0xFF19AA81),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(22),
               ),
               child: const Icon(
                 Icons.camera_alt,

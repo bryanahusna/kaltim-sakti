@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:kaltim_sakti/pages/beranda_page/darurat_page.dart';
 import 'package:kaltim_sakti/pages/login_page.dart';
 import 'package:kaltim_sakti/pages/main_page.dart';
 import 'package:kaltim_sakti/pages/welcome_screen.dart';
@@ -27,7 +28,15 @@ class MainApp extends StatelessWidget {
         name: 'main_page',
         builder: (context, state) {
           return const MainPage();
-        })
+        },
+        routes: [
+          GoRoute(
+              path: '/darurat_page',
+              name: 'darurat_page',
+              builder: (context, state) {
+                return const DaruratPage();
+              }),
+        ])
   ], initialLocation: '/welcome_screen', debugLogDiagnostics: false);
 
   MainApp({super.key});
