@@ -81,10 +81,7 @@ class BerandaPage extends StatelessWidget {
                     context,
                     'LaporGub',
                     'assets/logo_laporgub.png',
-                    () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Placeholder()))),
+                    () => context.goNamed('lapor_gub_page')),
                 _buildGridItem(
                     context,
                     'Darurat',
@@ -192,7 +189,6 @@ class BerandaPage extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                // add color
                 color: Color(0xFF113273),
               ),
             ),

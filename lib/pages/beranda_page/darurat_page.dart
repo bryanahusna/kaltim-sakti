@@ -35,45 +35,42 @@ class _DaruratPageState extends State<DaruratPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Flexible(
-              child: SizedBox(
-                height: MediaQuery.of(context).size.height *
-                    0.44, // Sesuaikan tinggi grid
-                child: GridView.count(
-                  physics: const NeverScrollableScrollPhysics(),
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 16,
-                  mainAxisSpacing: 16,
-                  children: [
-                    _buildEmergencyButton(
-                      context,
-                      'TIM SAR',
-                      'assets/logo_tim_sar',
-                      'sar',
-                    ),
-                    _buildEmergencyButton(
-                      context,
-                      'AMBULAN',
-                      'assets/logo_ambulan',
-                      'ambulance',
-                    ),
-                    _buildEmergencyButton(
-                      context,
-                      'POLISI',
-                      'assets/logo_polisi',
-                      'police',
-                    ),
-                    _buildEmergencyButton(
-                      context,
-                      'DAMKAR',
-                      'assets/logo_damkar',
-                      'firetruck',
-                    ),
-                  ],
-                ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height *
+                  0.44, // Sesuaikan tinggi grid
+              child: GridView.count(
+                physics: const NeverScrollableScrollPhysics(),
+                crossAxisCount: 2,
+                crossAxisSpacing: 16,
+                mainAxisSpacing: 16,
+                children: [
+                  _buildEmergencyButton(
+                    context,
+                    'TIM SAR',
+                    'assets/logo_tim_sar',
+                    'sar',
+                  ),
+                  _buildEmergencyButton(
+                    context,
+                    'AMBULAN',
+                    'assets/logo_ambulan',
+                    'ambulance',
+                  ),
+                  _buildEmergencyButton(
+                    context,
+                    'POLISI',
+                    'assets/logo_polisi',
+                    'police',
+                  ),
+                  _buildEmergencyButton(
+                    context,
+                    'DAMKAR',
+                    'assets/logo_damkar',
+                    'firetruck',
+                  ),
+                ],
               ),
             ),
-
             const SizedBox(height: 16),
             TextField(
               decoration: InputDecoration(
