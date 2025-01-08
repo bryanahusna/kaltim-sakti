@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class UrusIzinPage extends StatefulWidget {
@@ -79,27 +81,47 @@ class _IzinCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(32),
         color: Color(0xFF02517C)
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-              izinModel.title,
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 32),
-          ),
-          const SizedBox(height: 4,),
-          Text(
-              izinModel.description,
-              style: TextStyle(color: Colors.white),
-          ),
-          const SizedBox(height: 4,),
-          FilledButton(
-              onPressed: izinModel.onTap,
-              style: FilledButton.styleFrom(
-                backgroundColor: Color(0xFFEAB203)
+      child: IntrinsicHeight(
+        child: Stack(
+          children: [
+            SizedBox(
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(height: 32,),
+                  Transform.rotate(
+                    angle: -pi / 6,
+                    child: Image.asset('assets/beranda/to-do-list.png', height: 100,),
+                  ),
+                ],
               ),
-              child: Text('Cek di sini >', style: TextStyle(color: Colors.black),)
-          ),
-        ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                    izinModel.title,
+                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 32),
+                ),
+                const SizedBox(height: 4,),
+                Text(
+                    izinModel.description,
+                    style: TextStyle(color: Colors.white),
+                ),
+                const SizedBox(height: 4,),
+                FilledButton(
+                    onPressed: izinModel.onTap,
+                    style: FilledButton.styleFrom(
+                      backgroundColor: Color(0xFFEAB203)
+                    ),
+                    child: Text('Cek di sini >', style: TextStyle(color: Colors.black),)
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
