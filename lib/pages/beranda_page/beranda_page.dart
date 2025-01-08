@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BerandaPage extends StatelessWidget {
   const BerandaPage({super.key});
@@ -23,7 +24,7 @@ class BerandaPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 60),
+                  SizedBox(height: 50),
                   Image.asset(
                     'assets/logo_sakti.png',
                     height: 60,
@@ -88,10 +89,7 @@ class BerandaPage extends StatelessWidget {
                     context,
                     'Darurat',
                     'assets/logo_darurat.png',
-                    () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Placeholder()))),
+                    () => context.goNamed('darurat_page')),
                 _buildGridItem(
                     context,
                     'Info Kaltim',
@@ -151,9 +149,13 @@ class BerandaPage extends StatelessWidget {
                     ),
                   ),
                   
-                  Image.asset(
-                    'assets/illustration_beranda_2.png',
-                    width: MediaQuery.of(context).size.width * 0.3,
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    child: Image.asset(
+                      'assets/illustration_beranda_2.png',
+                      width: MediaQuery.of(context).size.width * 0.2,
+                      fit: BoxFit.contain,
+                    ),
                   )
                 ],
               ),
