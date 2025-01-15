@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kaltim_sakti/pages/beranda_page/darurat_page.dart';
 import 'package:kaltim_sakti/pages/beranda_page/info_kaltim_page.dart';
 import 'package:kaltim_sakti/pages/beranda_page/lapor_gub_page.dart';
 import 'package:kaltim_sakti/pages/beranda_page/urus_izin_page.dart';
+import 'package:kaltim_sakti/pages/lapor_page/detail_lapor_page.dart';
 import 'package:kaltim_sakti/pages/login_page.dart';
 import 'package:kaltim_sakti/pages/main_page.dart';
 import 'package:kaltim_sakti/pages/welcome_screen.dart';
@@ -57,6 +60,12 @@ class MainApp extends StatelessWidget {
               builder: (context, state) {
                 return const LaporGubPage();
               }),
+          GoRoute(
+              path: '/detail_lapor_page',
+              name: 'detail_lapor_page',
+              builder: (context, state) {
+                return DetailLaporPage(image: state.extra as File);
+              }),
         ])
   ], initialLocation: '/welcome_screen', debugLogDiagnostics: false);
 
@@ -69,6 +78,14 @@ class MainApp extends StatelessWidget {
       routerDelegate: router.routerDelegate,
       routeInformationProvider: router.routeInformationProvider,
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+        primaryColor: Color(0xFF02517C),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF02517C),
+          primary: const Color(0xFF02517C),
+        ),
+      ),
     );
   }
 }

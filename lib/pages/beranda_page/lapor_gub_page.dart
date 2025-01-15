@@ -55,7 +55,7 @@ class _LaporGubPageState extends State<LaporGubPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF95C7DF),
+      backgroundColor: const Color(0xFFD0ECF5),
       appBar: AppBar(
         title: const Text(
           'LaporGub',

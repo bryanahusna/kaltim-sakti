@@ -7,7 +7,7 @@ class BerandaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF95C7DF),
+      backgroundColor: const Color(0xFFD0ECF5),
       appBar: AppBar(
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
@@ -26,7 +26,7 @@ class BerandaPage extends StatelessWidget {
                 children: [
                   SizedBox(height: 50),
                   Image.asset(
-                    'assets/logo_sakti.png',
+                    'assets/logo_sakti_2.png',
                     height: 60,
                   ),
                   SizedBox(height: 10),
@@ -126,7 +126,7 @@ class BerandaPage extends StatelessWidget {
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFFF8BE2E),
+                            backgroundColor: const Color(0xFFFFD701),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),

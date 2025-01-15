@@ -20,7 +20,7 @@ class _InfoKaltimPageState extends State<InfoKaltimPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF95C7DF),
+      backgroundColor: const Color(0xFFD0ECF5),
       appBar: AppBar(
         title: const Text('Info Kaltim',
             style: TextStyle(
@@ -28,7 +28,6 @@ class _InfoKaltimPageState extends State<InfoKaltimPage> {
                 fontSize: 22,
                 fontWeight: FontWeight.bold)),
         backgroundColor: const Color(0xFF02517C),
-        // change color of back button
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Padding(

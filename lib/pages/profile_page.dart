@@ -51,7 +51,7 @@ class ProfilePage extends StatelessWidget {
                 context.goNamed('welcome_screen');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFF8BE2E),
+                backgroundColor: const Color(0xFFFFD701),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),

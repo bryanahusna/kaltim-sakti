@@ -19,7 +19,7 @@ class _DaruratPageState extends State<DaruratPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF95C7DF),
+      backgroundColor: const Color(0xFFD0ECF5),
       appBar: AppBar(
         title: const Text('Darurat',
             style: TextStyle(
@@ -27,7 +27,6 @@ class _DaruratPageState extends State<DaruratPage> {
                 fontSize: 22,
                 fontWeight: FontWeight.bold)),
         backgroundColor: const Color(0xFF02517C),
-        // change color of back button
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Padding(
@@ -76,12 +75,12 @@ class _DaruratPageState extends State<DaruratPage> {
               decoration: InputDecoration(
                 hintText: 'Lokasi',
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(8),
                 ),
                 filled: true,
                 fillColor: Colors.white,
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(8),
                   borderSide: const BorderSide(color: Color(0xFF113273)),
                 ),
               ),
@@ -92,12 +91,12 @@ class _DaruratPageState extends State<DaruratPage> {
               decoration: InputDecoration(
                 hintText: 'Deskripsi',
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(8),
                 ),
                 filled: true,
                 fillColor: Colors.white,
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(8),
                   borderSide: const BorderSide(color: Color(0xFF113273)),
                 ),
               ),
@@ -106,6 +105,9 @@ class _DaruratPageState extends State<DaruratPage> {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 backgroundColor: const Color(0xFFF8BE2E),
                 padding: const EdgeInsets.symmetric(vertical: 12),
               ),

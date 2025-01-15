@@ -1,4 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:kaltim_sakti/pages/beranda_page/beranda_page.dart';
 import 'package:kaltim_sakti/pages/profile_page.dart';
 
@@ -11,6 +15,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
+  final ImagePicker _picker = ImagePicker();
 
   final List<Widget> _pages = [
     const BerandaPage(),
@@ -20,10 +25,23 @@ class _MainPageState extends State<MainPage> {
     const ProfilePage(),
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+  Future<void> _pickImage(ImageSource source, BuildContext context) async {
+    final pickedFile = await _picker.pickImage(source: source);
+    if (pickedFile != null) {
+      setState(() {
+        context.pushNamed('detail_lapor_page', extra: File(pickedFile.path));
+      });
+    }
+  }
+
+  void _onItemTapped(int index, BuildContext context) {
+    if (index == 2){
+      _pickImage(ImageSource.camera, context);
+    } else {
+      setState(() {
+        _selectedIndex = index;
+      });
+    }
   }
 
   @override
@@ -35,7 +53,7 @@ class _MainPageState extends State<MainPage> {
         currentIndex: _selectedIndex,
         selectedItemColor: Color(0xFF113273),
         unselectedItemColor: Colors.grey,
-        onTap: _onItemTapped,
+        onTap: (index) => _onItemTapped(index, context),
         items: [
           const BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -73,5 +91,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
